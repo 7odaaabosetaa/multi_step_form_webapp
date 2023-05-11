@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi-step-form</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href='../css/all.min.css'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="progress">
+            <ul>
+                <li>
+                    <div class="num">
+                        1
+                    </div>
+                    <div class="text">
+                        <span>step 1</span>
+                        <span>your info</span>
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="num">
+                        2
+                    </div>
+                    <div class="text">
+                        <span>step 2</span><span>select plan</span></div>
+                </li>
+                <li>
+                    <div class="num">
+                        3
+                    </div>
+                    <div class="text">
+                        <span>step 3</span>
+                        <span>Add ons</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="num">
+                        4
+                    </div>
+                    <div class="text">
+                        <span>step 4</span>
+                        <span>summary</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="personal">
+            <h2>select plan</h2>
+            <p>you have the option of monthly or yearly billing </p>
+            <form>
+                <ul class="plan">
+                    <li id="acrade">
+                        <img src="../images/icon-arcade.svg" alt="acrade">
+                        <span class="text">acrade</span>
+                        <span class="num">$9/mo</span>
+                    </li>
+                    <li id="advanced">
+                        <img src="../images/icon-advanced.svg" alt="acrade">
+                        <span class="text">advanced</span>
+                        <span class="num">$12/mo</span>
+                    </li>
+                    <li id="pro">
+                        <img src="../images/icon-pro.svg" alt="acrade">
+                        <span class="text">pro</span>
+                        <span class="num">$15/mo</span>
+                    </li>
+                </ul>
+
+                <div class="mid">
+                    <span>monthy</span>
+                    <label>
+                        <input type="checkbox" checked="" class="toggelebox">
+                        <div class="toggele"></div>
+                    </label>
+                    <span>yearly</span>
+
+                </div>
+                <div class="links">
+                    <a href="../index.html" class="back">go back</a>
+                    <a href="add-ons.html" class="next plan">next step</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/plans.js"></script>
+    <script src="../js/main.js"></script>  
+
+</body>
+
+</html>
