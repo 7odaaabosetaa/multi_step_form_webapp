@@ -18,11 +18,7 @@ body {
   height: calc(100vh - 40px);
   position: relative;
 }
-@media (max-width: 992px) {
-  .container {
-    margin: 20px 20px;
-  }
-}
+
 .container .progress {
   background-image: url(../images/bg-sidebar-desktop.svg);
   background-size: cover;
@@ -74,9 +70,9 @@ body {
   margin-top: 50px;
   flex-grow: 1;
 }
-.container .personal form {
+/* .container .personal form {
   width: fit-content;
-}
+} */
 
 .container .personal h2 {
   text-transform: uppercase;
@@ -141,7 +137,7 @@ body {
 }
 .container .alert {
   background-color: #8c8596;
-  height: 100px;
+  height: fit-content;
   padding: 20px;
   border-radius: 8px;
   color: #fff;
@@ -151,6 +147,15 @@ body {
   transform: translate(-50%, -50%);
   display: none;
   z-index: 12;
+  text-transform: uppercase;
+  
+
+}
+.container .alert .alert-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .container .alert button {
   border: none;
@@ -173,84 +178,13 @@ body {
   z-index: 5;
   display: none;
 }
-/* responsive for personal page  */
-@media (max-width: 767px) {
-  .container {
-    margin: 10px 0;
-    padding: 10px;
-  }
-  .container .progress {
-    padding: 10px;
-    flex-basis: 150px;
-  }
-  .container .progress ul li {
-    font-size: 18px;
-  }
-  .container .progress ul li .num {
-    margin-right: 10px;
-    width: 25px;
-    height: 25px;
-  }
-  .container .progress ul li div {
-    font-size: 16px;
-  }
-  .container .personal {
-    margin-left: 20px;
-  }
-  .container .personal p {
-    margin-bottom: 20px;
-  }
-  .container .personal form input {
-    min-width: 150px;
-  }
 
-  .container .personal form input[type="checkbox"]{
-    min-width: 15px;
-  }
-  
-}
-@media (max-width: 375px) {
-  .container {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    background-color: #f3f3f3;
-  }
-  .container .progress {
-    background-image: url(../images/bg-sidebar-mobile.svg);
-    border-radius: 0;
-  }
-  .container .progress ul {
-    min-width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .container .progress div {
-    display: none;
-  }
-  .container .personal {
-    position: absolute;
-    background-color: #ffffff;
-    margin: 0 20px;
-    top: 120px;
-    right: 20px;
-    border-radius: 10px;
-    width: 300px;
-    min-width: 250px;
-    padding: 10px;
-  }
-  .container .personal form {
-    width: 100%;
-  }
-  .container .personal input {
-    min-width: 100%;
-  }
-}
+
 /* end personal page */
 /* start plans page */
 .container .personal ul.plan {
   display: flex;
+  flex-direction: row;
 }
 .container .personal ul.plan li {
   display: flex;
@@ -282,21 +216,18 @@ body {
   font-weight: 500;
   margin-top: 5px;
 }
-@media (max-width: 375px) {
-  .container .personal ul.plan {
-    flex-direction: column;
-  }
+
   .container .personal ul.plan li {
     width: 100%;
-    margin: 0 0 20px;
-    flex-direction: row;
-    height: calc(70px);
+    margin: 0 0 20px 10px;
+    flex-direction: column;
+    height: fit-content;
     align-items: center;
   }
   .container .personal ul.plan li img {
     margin: 0 20px 0 0;
   }
-}
+
 .personal .mid{
     display: flex;
     justify-content: space-between;
@@ -350,7 +281,6 @@ label {
 }
 .mid{
     display: flex;
-
 }
 /*  */
 
@@ -389,7 +319,7 @@ label {
 .finish  .container .personal ul{
   background-color: #f0f3ff;
   flex-direction: column;
-  width: 40vw;
+  /* width: 40vw; */
   border-radius: none;
   padding: 10px;
   }
@@ -455,9 +385,10 @@ color:#aaa9a9;
   flex-wrap: wrap;
 }
 .thanks-page .thanks p{
-  min-width: 100%;
+  min-width: calc(100% - 100px);
   text-align: center;
   color: #949494;
+  margin: 0 auto
   
 }
 .thanks-page .thanks h3{
@@ -471,5 +402,129 @@ color:#aaa9a9;
   align-self: center;
 }
 .thanks-page .personal{
-  width: 100%;margin-right: 10px;
+  width: 100%;
+  margin-right: 10px;
+}
+/* media for this project */
+
+/* media 992 px */
+@media (max-width: 992px) {
+  .container {
+    margin: 20px 20px;
+  }
+}
+/* media 567px */
+@media (max-width: 767px) {
+  .container {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .container .progress {
+    padding: 10px;
+    flex-basis: 150px;
+  }
+  .container .progress ul li {
+    font-size: 18px;
+  }
+  .container .progress ul li .num {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+  }
+  .container .progress ul li div {
+    font-size: 16px;
+  }
+  .container .personal {
+    margin-left: 20px;
+  }
+  .container .personal p {
+    margin-bottom: 20px;
+  }
+  .container .personal form input {
+    min-width: 100%;
+  }
+
+  .container .personal form input[type="checkbox"]{
+    min-width: 15px;
+  }
+  
+}
+
+/* media 567px  */
+@media (max-width:567px){
+  .container .personal input{
+     width: 100%;
+}
+.container .personal ul.plan {
+  flex-direction: column;
+}
+.container .personal ul.plan li {
+flex-direction: row;
+margin-left: 10px;
+width: calc(100% - 30px);
+  
+}
+.thanks-page .thanks p {
+  min-width: calc(100% - 10px);
+}
+
+.container .personal ul.plan li img {
+margin-bottom: 0px;
+
+}
+.personal .mid {
+  padding: 0;
+}
+}
+  @media (max-width: 420px) {
+    .container {
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      background-color: #f3f3f3;
+      align-items: center;
+    }
+    .container .progress {
+      background-image: url(../images/bg-sidebar-mobile.svg);
+      border-radius: 0;
+      width: 100%;
+    }
+    .container .progress ul {
+      min-width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .container .progress div {
+      display: none;
+    }
+    .container .personal {
+      position: absolute;
+      background-color: #ffffff;
+      margin: -10px auto 0 auto;
+      top: 120px;
+      /* right: 20px; */
+      border-radius: 10px;
+      width: 300px;
+      min-width: 250px;
+      padding: 10px;
+    }
+    .container .personal form {
+      width: 100%;
+    }
+    .container .personal input {
+      min-width: 100%;
+    }
+     .container .personal ul.plan {
+    flex-direction: column;
+  }
+.container .personal ul.plan li {
+  flex-direction: row;
+    
+}
+.container .personal ul.plan li img {
+  /* align-self: flex-start; */
+  margin-bottom: 0px;
+}
 }
